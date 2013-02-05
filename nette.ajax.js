@@ -205,7 +205,7 @@ var nette = function () {
 
 		xhr = $.ajax(settings);
 
-		if (xhr) {
+		if (xhr && xhr.status > 0) {
 			xhr.done(function (payload, status, xhr) {
 				inner.fire({
 					name: 'success',
